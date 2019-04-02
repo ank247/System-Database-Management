@@ -1,0 +1,78 @@
+
+ .div{
+           display:block;
+           margin-bottom:0.5em;
+   }
+
+ .a{
+       word-spacing:10px;
+  }
+
+ #wrapper{
+          width:800px;
+          height:55px;
+          display:inline-block;
+          margin-bottom:0em;
+ }
+
+ #upright{
+           width:20%;
+	   height:5%;
+  }
+
+  #upleft{
+          width:20%;
+          height:5%;
+	  position:relative;
+	  left:800px;
+  }
+
+  #middle{
+         width:60%;
+         height:5%;
+  }
+
+  #images{
+           background-image: url("/static/images/logo-testlive.png");
+           background-repeat: no-repeat;
+           background-size: 110px 55px;
+           padding:30px 40px;
+	   margin-bottom:0em;
+  }
+
+  #headerImage{
+                -webkit-filter:grayscale(10%);
+                filter:grayscale(10%);
+	        background-image:url("/static/images/header-testlive.jpg");
+		background-repeat:no-repeat;
+		color:lightgreen;
+                padding:100px;
+		background-size:100% 440px;
+		margin-bottom:0 em;
+  }
+
+  #gif{
+        background-image:url("/static/images/own_arrow-black.gif");
+	background-repeat:no-repeat;
+	background-size:100px 50px;
+	padding:20px;
+  }
+
+  div.relative{
+               position:left;
+  }
+  a.col-sm-4{
+          position:relative;
+	  padding-right:8px;
+          padding-left:8px;
+	  border-width:3px;
+  }
+ #image-2{
+         background-image:url("/static/images/header1-testlive.jpg");
+         background-repeat:no-repeat;
+         background-size:100% 100%;
+	 padding-right:40px;
+	 padding-left:40px;
+	 margin-bottom:0em;
+ }
+

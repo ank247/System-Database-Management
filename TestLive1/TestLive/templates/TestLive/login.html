@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>TestLive | login</title>
+  <style type="text/css">
+   div{
+        display:block;
+	margin:0px;
+   }
+
+   #wrapper{
+        width:1000px;
+        height:1500px;  
+   }
+
+   #upleft{
+        width:60%;
+        height:240%;
+	background-image:url("/static/images/logo-testlive.png");
+        background-size:1800px, 180px;
+        background-repeat: no-repeat;   
+	float:left;
+	padding:20px;
+   }
+
+   #upright{
+        width:40%;
+	height:240%;
+	background:rgb(100,68,100);
+	float:left;
+	font-size:15px;
+	margin:0px;
+   }
+
+   #below{
+       float:left;
+       height:0%;
+       width:0%;
+       background:green;
+   }
+
+   #images{
+      background-image:url("/static/images/logo-testlive.png");
+      background-size: 200%, 140%;
+      background-repeat: no-repeat;
+   }
+
+   #title{
+           padding:0px 20px;
+   }
+ 
+   #h{
+      margin:0px;
+   }
+  </style>
+ </head>
+ <body>
+  <div> <!-- id="wrapper" -->
+   <div id="upleft">
+    <br/><br/><br/>
+    <h1 style="color:brown; margin:0px">Test<cite style="color:lightgreen;"><em>Live</em></cite></h1><br/>
+    <h1 style="color:brown;">India's Reputed Live Mock Preparation Site</h1>
+    <div style="color:black; font-size:30px;">for</div>
+    <div style="color:black; font-size:30px; margin:0px">Bank,SSC,RRB,GATE,JEE,UPSC</div>
+    <div style="color:black; font-size:30px; margin:0px"> & other exams</div>
+    <h1><div style="color:purple;margin:0px">Flexible Test Time Period</div></h1>
+    <div style="color:black; font-size:20px; margin:0px">(check description for validity)</div><br/>
+    <div style="color:black;font-size:20px;"><i>Based on latest pattern and syllabus of exams</i></div>
+    <br/>
+    <img src="/static/images/desktop.png" alt="desktop"><div style="color:black; padding:4px">Latest Pattern & Web Interface</div>
+    <img src="/static/images/ranking.png" alt='ranking'><div style="color:black; padding:4px">All India Rank Analysis</div>
+    <img src="/static/images/pieAnalysis.png" alt='pie-chart'><div style="color:black; padding:4px">Detailed Analysis & Solutions</div>          
+    <img src="/static/images/desktopApp.png" alt='desktop-app'><div style="color:black; padding:4px">Available on Desktop & Android App</div>
+   </div>
+
+ <!-- RightHandSide. ---------------------------------------------------------------------------------- -->
+
+   <div id="upright">
+    <br/><br/><br/>
+    <br/>
+    <center><img src="/static/images/logo-testlive.png" alt="logo-testlive.png"></center>
+      <br/><br/>
+      <div style="color:white; font-size:25px;"><center>REGISTER NOW</center></div>
+      <div style="color:white; font-size:20px;"><center>SUBSCRIPTIONS AVAILABLE</center>
+      <div style="color:white; font-size:20px;"><center>FREE!</center>
+     <br/>
+     <center>
+      <div style="color:white; font-size:15px;">
+       <a href="http://www.facebook.com/login" target="_blank">FACEBOOK</a>
+       <a href="https://accounts.google.com/ServiceLogin/identifier?service=mail&passive=true&rm=false&continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&ss=1&scc=1&ltmpl=default&ltmplcache=2&emr=1&osid=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin" target="_blank">GOOGLE+</a>
+      </div>   
+     </center><br/>
+     <div style="color:white; font-size:15px;"><center>OR</center><br/></div>
+      <div class='sub-menu'> 
+       <br/>
+      {% for Name in Registration.Email %}
+      <a href="#">{{ Registration.Email}}</a>
+      {% endfor %}
+      <div style="color:white; font-size:15px;">Name<center><input  alt="name"></input></center></div><br/><br/>
+      <div style="color:white; font-size:15px;">Email<center><input type="text" alt="email"></center></input></div><br/><br/>
+      <div style="color:white; font-size:15px;">Password<center><input type="password" alt="pwd"></input></center></div><br/><br/>
+      <div style="color:white; font-size:15px;">Mobile No.<center><input type="digits" alt="mobile."></input></center></div><br/><br/>
+      <div type="form" style="color:white; font-size:18px;"><a href="http://127.0.0.1:8000/admin/TestLive/registration/add/" type="button" target="_blank"><h4><center>REGISTER NOW</center></a></div>
+      <div style="color:black; font-size:15px;"><center>Already registered. Please</center>
+      <div style="color:purple; font-size:15px;"><a href="http://127.0.0.1:8000/admin/TestLive/login/add/" target="_blank"><center>login</center></a></div>
+     </table>
+    </div>
+   </div>
+  </div> 
+ </body>
+</html>
+

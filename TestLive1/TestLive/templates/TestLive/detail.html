@@ -1,0 +1,52 @@
+<html>
+ <head>
+  <title>TestLive</title>
+ </head>
+ <body>
+	 <header>
+          <h1>
+	   <center>
+	    <div class='popup' onclick='return popup()'>
+             <a href="#">TestLive
+	     </a>
+	    </div>
+	   </center> 
+            <div>
+             <form action="{% url 'TestLive:index' %}" method="post">
+	     {% csrf_token %}
+	     {% for Exam in latest_upload %}
+	        <input type="radio" name="Exam" id="Exam{{forloop.counter}}" value="{{Exam.id}}"/>
+		<label for="{{forloop.counter}}">{{Exam.Exam_Type}}</label><br/>
+	     {% endfor %}
+	     <input type="submit" value="upload" />
+	     </form>
+	    </div>
+	  </h1>
+	  <h4><a class="reference internal" href = "../TestLive">Exams</a></h4>
+ {% if latest_upload %}
+     <ul>
+      {% for Exam in latest_upload %}
+         <li>
+         <a href = "{% url 'TestLive:index'%}" target = "_blank">{{Exam.Exam_Type}}
+           </a>
+	     <div>
+	         <ul>
+		    <li>
+		       <a href = "/TestLive/{{Exam.id}}/" target = "_blank">{{Exam.Exam_Type}} Paper</a>
+		    </li>
+		 </ul>
+	     </div>
+	 </li>
+      {% endfor %}
+     </ul>
+ {% else %}
+     <p>No TestLive.</p>
+ {% endif %}
+    </div>
+  </header>
+  <footer>
+  </footer>
+ </body>
+</html>
+
+

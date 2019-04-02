@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+ 
+.dropdown-content {
+    display: none;
+}
+
+.show {display:block;}
+
+</style>
+</head>
+<body>
+<h1>Button.</h1>
+<div>
+ <button id="myBtn">Dropdown</button>
+ <div id="myDropdown" class="dropdown-content">
+    <a href="#home">Home</a><br/> 
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+ </div>
+</div>
+
+<script>
+// Get the button, and when the user clicks on it, execute myFunction
+document.getElementById("myBtn").onclick = function() {myFunction()};
+
+/* myFunction toggles between adding and removing the show class, which is used to hide and show the dropdown content */
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+</script>
+
+</body>
+</html>
+
