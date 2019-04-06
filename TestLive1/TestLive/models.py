@@ -6,6 +6,15 @@ from django import forms
 #from .forms import fileUpload
 # Create your models here.
 
+class SignUp(models.Model):
+    Email = models.CharField(max_length = 100)
+    Password = models.CharField(max_length = 128)
+    NewPassword = models.CharField(max_length = 128)
+
+class Login(models.Model):
+    Email = models.CharField(max_length = 100)
+    Password = models.CharField(max_length = 128)
+    
 class Exam(models.Model):
     Exam_Type = models.CharField(max_length = 30)
     Date = models.DateTimeField('date published')
@@ -40,9 +49,6 @@ class Registration(models.Model):
     Password = models.CharField(max_length = 1000)
     Mobile_no = models.DecimalField(max_digits = 10, decimal_places = 0)
 
-class Login(models.Model):
-    Email = models.CharField(max_length = 100)
-    Password = models.CharField(max_length = 128)
 
 class Plan(models.Model):
     Plan = models.CharField(max_length = 30)
