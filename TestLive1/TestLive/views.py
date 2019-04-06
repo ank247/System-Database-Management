@@ -2,14 +2,21 @@
 from __future__ import unicode_literals
 
 from django.shortcuts import render
-from django.http import HttpResponse
-from .forms import fileUpload
+from .forms import fileUpload, NameForm
 from django.http import HttpResponseRedirect
 from .models import Exam, Login, Set, Analytic, User, Registration, Plan, E_Commerce, Payment, Choose_Plan, Query, Contact_Us, Upload_Form 
-#from django.template import loader
-from django.shortcuts import render
 
-#from somewhere import handle_fileUpload
+#-----------------------------------------------------------------------
+
+def sign_up(request):
+    if request.method == "POST":
+        form=NameForm(request.POST)
+        if form.is_valid:
+            return HttpResponseRedirect("/detail/")
+    else
+       form=NameForm()
+    return render(request,"sign_up.html",{'form':form})
+
 #------------------------------------------------------------------------
 
 def home(request):
