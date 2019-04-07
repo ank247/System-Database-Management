@@ -21,12 +21,7 @@ def sign_up(request):
 
 def home(request):
     home = Plan.objects.all()
-    return render(request, 'home.html', {'Name': home,
-#                     'Email': Email,
-#                     'Password': Password,
-#                     'Mobile_no': Mobile_no,
-        }
-    )
+    return render(request, 'home.html', {'Name': home})
 
 #--------------------------------- Create your views here.---------------
 
@@ -38,87 +33,43 @@ def login(request):
 
 def blogs(request):
     blog = Query.objects.all()
-    return render(request, 'blogs.html', {'Name': blog,
-#                     'Email': Email,
-#                     'Password': Password,
-#                     'Mobile_no': Mobile_no,
-        }
-    )
+    return render(request, 'blogs.html', {'Name': blog})
 
 #------------------------------------------------------------------------
 
 def discussions(request):
     discussion = Contact_Us.objects.all()
-    return render(request, 'discussion.html', {'Name': discussion,
-#                     'Email': Email,
-#                     'Password': Password,
-#                     'Mobile_no': Mobile_no,
-        }
-    )
+    return render(request, 'discussion.html', {'Name': discussion})
 
 #------------------------------------------------------------------------
 
 def promo(request):
     promo = Analytics.objects.all()
-    return render(request, 'promo.html', {'Name': promo,
-#                     'Email': Email,
-#                     'Password': Password,
-#                     'Mobile_no': Mobile_no,
-        }
-    )
+    return render(request, 'promo.html', {'Name': promo})
 
 #------------------------------------------------------------------------
 
 def refer(request):
     refer = Set.objects.all()
-    return render(request, 'refer.html', {'Name': refer,
-#                     'Email': Email,
-#                     'Password': Password,
-#                     'Mobile_no': Mobile_no,
-        }
-    )
+    return render(request, 'refer.html', {'Name': refer})
 
 #------------------------------------------------------------------------
 
 def courses(request):
     course = Exam.objects.all()
-    return render(request, 'courses.html', {'Name': course,
-#                     'Email': Email,
-#                     'Password': Password,
-#                     'Mobile_no': Mobile_no,
-        }
-    )
+    return render(request, 'courses.html', {'Name': course})
 
 #------------------------------------------------------------------------
 
 def exams(request):
     exam = Exam.objects.all()
-    return render(request, 'exams.html', {'Name': exam,
-#                     'Email': Email,
-#                     'Password': Password,
-#                     'Mobile_no': Mobile_no,
-        }
-    )
+    return render(request, 'exams.html', {'Name': exam})
 
 #------------------------------------------------------------------------
 
 def passes(request):
     passes = Plan.objects.all()
     return render(request, 'pass.html', {'Name': passes,
-#                     'Email': Email,
-#                     'Password': Password,
-#                     'Mobile_no': Mobile_no,
-        }
-    )
-
-#------------------------------------------------------------------------
-
-def sign_up(request):
-    sign_up = Login.objects.all()
-    return render(request, 'sign_up.html', {'Name': sign_up,
-#                     'Email': Email,
-#                     'Password': Password,
-#                     'Mobile_no': Mobile_no,
         }
     )
 
@@ -126,34 +77,19 @@ def sign_up(request):
 
 def gk_CA(request):
     Gk_CA = Exam.objects.all()
-    return render(request, 'gk_CA.html', {'Name': Gk_CA,
-#                     'Email': Email,
-#                     'Password': Password,
-#                     'Mobile_no': Mobile_no,
-        }
-    )
+    return render(request, 'gk_CA.html', {'Name': Gk_CA})
 
 #------------------------------------------------------------------------
 
 def practise(request):
     practise = Set.objects.all()
-    return render(request, 'practise.html', {'Name': practise,
-#                     'Email': Email,
-#                     'Password': Password,
-#                     'Mobile_no': Mobile_no,
-        }
-    )
+    return render(request, 'practise.html', {'Name': practise})
 
 #------------------------------------------------------------------------
 
 def upload(request):
     upload = Upload_Form.objects.all()
-    return render(request, 'upload.html', {'Name': upload,
-#                     'Email': Email,
-#                     'Password': Password,
-#                     'Mobile_no': Mobile_no,
-        }
-    )
+    return render(request, 'upload.html', {'Name': upload})
 
 #-----------------------------------------------------------------------
 """
@@ -171,11 +107,6 @@ def file_upload(request):
 
 def index(request):
     Name = Registration.objects.all()
-    return render(request, 'home.html', {'Name': Name,
-#                     'Email': Email,
-#                     'Password': Password,
-#                     'Mobile_no': Mobile_no,
-        }
-    )
+    return render(request, 'home.html', {'Name': Name})
 #-----------------------------------------------------------------------
 
