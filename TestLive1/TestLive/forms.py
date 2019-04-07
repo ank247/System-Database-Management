@@ -1,7 +1,7 @@
 
 from django import forms
 from django.db import models
-from .models import SignUp, Login
+from .models import SignUp,Login
 
 class NameForm(forms.Form):
     
@@ -14,7 +14,7 @@ class ContactForm(forms.Form):
     bcc=forms.EmailField()
     
 class fileUpload(forms.Form):
-    title = forms.CharField(max_length = 30)
+    title = forms.CharField(max_length=30)
     file = forms.FileField()
 
 class Exam(forms.Form):
