@@ -3,7 +3,7 @@ from __future__ import unicode_literals
 
 from django.shortcuts import render
 from .forms import fileUpload, NameForm
-from django.mails import email_sent, BadHeadError
+from django.core.mail import send_email, BadHeaderError
 from django.http import HttpResponseRedirect, HttpResponse
 from .models import Exam, Login, Set, Analytic, User, Registration, Plan, E_Commerce, Payment, Choose_Plan, Query, Contact_Us, Upload_Form 
 
@@ -29,7 +29,7 @@ def contact_form(request):
           reciepents.append(bcc)
        if subject and message and sender and reciepents:
           try:
-              email_sent(subject,message,sender,receipents)
+              send_email(subject,message,sender,receipents)
               return HttpResponseRedirect("/home/contactform")
           except BadHeaderError:
             return HttpResponse("failed")
