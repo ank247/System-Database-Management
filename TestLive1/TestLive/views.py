@@ -24,14 +24,15 @@ def contact_form(request):
        bcc=request.POST.get('bcc','')
        reciepents=['TestLive@edu.in']
        if cc_myself:
-          reciepents.append(cc_myself)
+          reciepents.append(sender)
        if bcc:
           reciepents.append(bcc)
        if subject and message and sender and reciepents:
           try:
-              send.email_sent(subject,message,sender,receipents)
+              email_sent(subject,message,sender,receipents)
+              return HttpResponseRedirect("/home/contactform")
           except BadHeaderError:
-            return HttpResponseRedirect("/contact-form/")
+            return HttpResponse("failed")
        else:
           return HttpResponse("Enter each option again.")
        
@@ -69,9 +70,7 @@ def exams(request):
 
 def passes(request):
     passes = Plan.objects.all()
-    return render(request, 'pass.html', {'Name': passes,
-        }
-    )
+    return render(request, 'pass.html', {'Name': passes})
 
 def gk_CA(request):
     Gk_CA = Exam.objects.all()
