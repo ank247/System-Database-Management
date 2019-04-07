@@ -7,10 +7,10 @@ class NameForm(forms.Form):
     
     
 class ContactForm(forms.Form):
-    sender=forms.EmailField(max_length=50)
-    text=forms.CharField(required=textarea,max_length=300)
-    cc_sender=forms.EmailField(max_length=50)
-    receipients=forms.EmailField(max_length=50)
+    subject=forms.CharField(max_length=100)
+    message=forms.CharField(widget=forms.Textarea,max_length=300)
+    sender=forms.EmailField()
+    cc_myself=forms.BooleanField(required=False)
     
 class fileUpload(forms.Form):
     title = forms.CharField(max_length = 30)
