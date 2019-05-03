@@ -1,1 +1,6 @@
 
+
+{% if blogs %}
+{% csrf_token %}
+  <h1> Here is:<a>{{blogs.blog}}</a></h1>
+{% endif %}
