@@ -7,7 +7,7 @@ from django.contrib.auth.models import User, Group
 class Physic(models.Model):
       course=models.CharField(max_length=100)
       paper_id=models.CharField(max_length=50)
-      paper=models.CharField(max_length=50)
+      paper=models.FileField()
 
       def __str__(self):
           return self.course
@@ -15,7 +15,7 @@ class Physic(models.Model):
 class Chemistry(models.Model):
       course=models.CharField(max_length=100)
       paper_id=models.CharField(max_length=50)
-      paper=models.CharField(max_length=50)
+      paper=models.FileField()
 
       def __str__(self):
           return self.course
@@ -23,7 +23,7 @@ class Chemistry(models.Model):
 class Mathematic(models.Model):
       course=models.CharField(max_length=100)
       paper_id=models.CharField(max_length=50)
-      paper=models.CharField(max_length=50)
+      paper=models.FileField()
 
       def __str__(self):
           return self.course
@@ -31,7 +31,7 @@ class Mathematic(models.Model):
 class Mechanical(models.Model):
       course=models.CharField(max_length=100)
       paper_id=models.CharField(max_length=50)
-      paper=models.CharField(max_length=50)
+      paper=models.FileField()
 
       def __str__(self):
           return self.course
@@ -39,7 +39,7 @@ class Mechanical(models.Model):
 class Computer_Science(models.Model):
       course=models.CharField(max_length=100)
       paper_id=models.CharField(max_length=50)
-      paper=models.CharField(max_length=50)
+      paper=models.FileField()
 
       def __str__(self):
           return self.course
@@ -47,7 +47,7 @@ class Computer_Science(models.Model):
 class Electrical(models.Model):
       course=models.CharField(max_length=100)
       paper_id=models.CharField(max_length=50)
-      paper=models.CharField(max_length=50)
+      paper=models.FileField()
 
       def __str__(self):
           return self.course
@@ -55,7 +55,7 @@ class Electrical(models.Model):
 class Electronic(models.Model):
       course=models.CharField(max_length=100)
       paper_id=models.CharField(max_length=50)
-      paper=models.CharField(max_length=50)
+      paper=models.FileField()
 
       def __str__(self):
           return self.course
@@ -63,7 +63,7 @@ class Electronic(models.Model):
 class Civil(models.Model):
       course=models.CharField(max_length=100)
       paper_id=models.CharField(max_length=50)
-      paper=models.CharField(max_length=50)
+      paper=models.FileField()
 
       def __str__(self):
           return self.course
