@@ -8,5 +8,4 @@ class TestliveConfig(AppConfig):
     name = 'TestLive'
 
     def ready(self):
-        import users.signals
-
+        import TestLive.signals
