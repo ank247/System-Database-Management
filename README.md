@@ -3,6 +3,7 @@
 credit for the basic tutorials is given to Django Documentation.
 
 Updated Architecture: IaaS(Infrastructure As A Service)
+
 System Architecture:MVT(Models-->Views-->Templates):PaaS(Platform As A Service)
 
 This is a cloudAPI that includes components superAdmin, Admin and Users. SuperAdmin has control over all the functionalities to be assigned to the Admin and their Users.
