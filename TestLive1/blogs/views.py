@@ -3,24 +3,25 @@ from __future__ import unicode_literals
 
 from django.shortcuts import render
 from django.http import HttpResponse,HttpResponseRedirect
-from .forms import BlogForm 
-from .models import BlogModel
+from django.contrib.auth.decorators import login_required
+from django.views.generic import ListView
+from .forms import blogForm
+from .models import blogModel
 
-# Create your views here.
 
-def blogs(request):
-    blog=BlogModel()
-    return render(request,'blogs/blogs.html',{'blogs':blog})
+class blogList(ListView):
+    model=blogModel
 
-"""
-def blogs(request):
-    if request.method=="POST":
-       blogs=BlogForm(request.POST)
-       if blogs.is_valid():
-          blogs.save()
-          return HttpResponseRedirect('/blogs/')
+
+@login_required
+def update_blog(request):
+    if request.method=='POST':
+       blog=blogForm(request.POST,instance=request.user)       
+       if blog.is_valid():
+          blog.save()
+          #user=form.cleaned_data.get('username')
+          return HttpResponseRedirect('/blogs/blog/')
     else:
-       blogs=BlogForm()
-    return HttpResponse(request,'blogs/blogs.html',{'blogs':blogs})
-"""
+       blog=blogForm(instance=request.user)
+    return render(request,'blogs/blogs.html',{'blog':blog})
 
