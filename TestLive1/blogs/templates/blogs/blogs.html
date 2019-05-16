@@ -1,6 +1,9 @@
 
+<form method="POST">
+ {% csrf_token %}
+ {% if blog %}
+   <br>{{blog.as_p}}</br>  
+ {% endif %}
+ <input type='submit' value='Post'>
+</form>
 
-{% if blogs %}
-{% csrf_token %}
-  <h1> Here is:<a>{{blogs.blog}}</a></h1>
-{% endif %}
