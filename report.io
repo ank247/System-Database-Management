@@ -1,4 +1,4 @@
-<!-- Report for frontend. -->
+<!-- Report for UI/UX bakend -->
 
 1. DocType: html.
 
@@ -37,7 +37,7 @@ Day10:
 
 Day11:
 1. TestLive >> App not created in 127.0.0.1:8000/admin/
-2.
+
 
 Day12:
 1. ~/TestLive1/TestLive/urls.py >> linking of App-url to Web-Url.
@@ -80,7 +80,7 @@ Day19:
 
 Day20:
 1. ~/TestLive1/TestLive/views.py >> No function:index response.
-2. 
+ 
 
 Day21:
 1.
@@ -98,6 +98,3 @@ Day23:
     6. Registration
     7. User
 	
-Day24:
-1.
-
