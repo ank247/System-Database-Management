@@ -1,9 +1,8 @@
 
 from django.conf.urls import url
-from django import views
-from . import views 
+from .views import blogList
+
 
 urlpatterns=[
-   url('',views.blogs,name='blogs'),
+   url('',blogList.as_view(template_name='blogs/blogList.html'),name='blogList'),
 ]
-
