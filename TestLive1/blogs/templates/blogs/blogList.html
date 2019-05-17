@@ -8,7 +8,23 @@
   <br></br>
 {% endfor %}
 
-{% for blogs in object_list %}
+{% for page in page %}
+   <br>{{page.user}}</br>
+   <br>{{page.date.date}} :: {{page.date.time}}</br>
+   <br>{{page.title}}</br>
+   <br>{{page.blog}}</br>
 {% endfor %}
 
+{% if page.next_previous %}
+   <a href="?page=1">&laquo;first</a>
+   <a href="?page={{page.previous_page_number}}">previous</a>
+{% endif %}
+
+<span>
+</span>
+
+{% if page.has_next %}
+   <a href="?page={{page.next_page_number}}">next</a>
+   <a href="?page={{page.paginator.num_pages}}">last &raquo;</a>
+{% endif %}
 
