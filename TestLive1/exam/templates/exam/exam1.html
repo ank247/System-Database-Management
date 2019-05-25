@@ -1,1 +1,13 @@
 
+
+<form method="POST">
+{% if page %}
+   {{page.object_list.type}}   {{page.object_list.duration}}
+   {% for column in page.object_list %}
+      {{column.file}}<br>        
+   {% endfor %} 
+{% endif %}
+<input type="submit" value="save">
+</form>
+
+
